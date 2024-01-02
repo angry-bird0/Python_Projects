@@ -1,0 +1,6 @@
+iAdj = input("Enter an adjective: ")
+firstVerb = input("Enter a verb: ")
+secondVerb = input("Enter another verb: ")
+famousPerson = input("Enter the name of a famous person (fictional or real): ")
+madLib = (f"\nComputer programming is so {iAdj}! It makes me so excited all the time because I love to {firstVerb}. Stay hydrated and {secondVerb} like you are {famousPerson}.")
+print(madLib)
