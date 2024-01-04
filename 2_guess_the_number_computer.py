@@ -8,7 +8,7 @@ while (iMax < iMin):
 randNum = randint(iMin, iMax)
 iGuess = None
 while(iGuess != randNum):
-    iGuess = int(input("Enter your guess: "))
+    iGuess = int(input("\n\nEnter your guess: "))
     if (iGuess > randNum):
         print("Guess lower")
     elif (iGuess < randNum):
