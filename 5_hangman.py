@@ -1,60 +1,40 @@
-import random
-from words import words
-from hangman_visual import lives_visual_dict
-import string
+from random import choice
 
+#I asked ChatGPT to provide me with 100 words encased in quotes and separated by commas
+wordList = ['apple', 'banana', 'carrot', 'dog', 'elephant', 'fantastic', 'giraffe', 'happiness', 'imagination', 'jazz', 'kiwi', 'lemon', 'mountain', 'novel', 'ocean', 'penguin', 'quasar', 'rhythm', 'sunshine', 'tangerine', 'umbrella', 'violet', 'whisper', 'xylophone', 'yellow', 'zeppelin', 'adventure', 'butterfly', 'chocolate', 'diamond', 'enigma', 'firefly', 'garden', 'harmony', 'island', 'jasmine', 'kaleidoscope', 'lighthouse', 'melody', 'nightingale', 'orchestra', 'peacock', 'quixotic', 'rose', 'serendipity', 'tranquil', 'utopia', 'velvet', 'wonder', 'xanadu', 'yearning', 'zeal', 'alchemy', 'blossom', 'cascade', 'dream', 'effervescent', 'freedom', 'glisten', 'halcyon', 'innocence', 'journey', 'kismet', 'luminous', 'mystique', 'nirvana', 'opulent', 'prismatic', 'quaint', 'radiant', 'serenity', 'talisman', 'uplifting', 'vivid', 'whimsical', 'zenith', 'amazing', 'bliss', 'cynosure', 'dazzling', 'ecstasy', 'felicity', 'graceful', 'halo', 'intrepid', 'jubilant', 'kaleidoscopic', 'lullaby', 'mesmerize', 'nurturing', 'opulent', 'paradise', 'quasar', 'resplendent', 'serendipity', 'tranquil', 'uplifting', 'vibrant', 'whimsical', 'xylograph', 'yearning', 'zenith']
 
-def get_valid_word(words):
-    word = random.choice(words)  # randomly chooses something from the list
-    while '-' in word or ' ' in word:
-        word = random.choice(words)
+iWord = choice(wordList)
+wordLetters = set(iWord)
+remainingAlphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+usedLetters = []
+iLives = int(input("\nEnter the number of lives: "))
 
-    return word.upper()
-
-
-def hangman():
-    word = get_valid_word(words)
-    word_letters = set(word)  # letters in the word
-    alphabet = set(string.ascii_uppercase)
-    used_letters = set()  # what the user has guessed
-
-    lives = 7
-
-    # getting user input
-    while len(word_letters) > 0 and lives > 0:
-        # letters used
-        # ' '.join(['a', 'b', 'cd']) --> 'a b cd'
-        print('You have', lives, 'lives left and you have used these letters: ', ' '.join(used_letters))
-
-        # what current word is (ie W - R D)
-        word_list = [letter if letter in used_letters else '-' for letter in word]
-        print(lives_visual_dict[lives])
-        print('Current word: ', ' '.join(word_list))
-
-        user_letter = input('Guess a letter: ').upper()
-        if user_letter in alphabet - used_letters:
-            used_letters.add(user_letter)
-            if user_letter in word_letters:
-                word_letters.remove(user_letter)
-                print('')
-
-            else:
-                lives = lives - 1  # takes away a life if wrong
-                print('\nYour letter,', user_letter, 'is not in the word.')
-
-        elif user_letter in used_letters:
-            print('\nYou have already used that letter. Guess another letter.')
-
+while ((len(wordLetters) > 0) and (iLives > 0)):
+    print(f"\nYou have {iLives} lives left, and you have used: {usedLetters}.")
+    print("The word is: ", end = "")
+    for iChar in iWord:
+        if (iChar in usedLetters):
+            print(iChar, end = "")
         else:
-            print('\nThat is not a valid letter.')
-
-    # gets here when len(word_letters) == 0 OR when lives == 0
-    if lives == 0:
-        print(lives_visual_dict[lives])
-        print('You died, sorry. The word was', word)
+            print("_", end = "")
+    userLetter = input("\nEnter a letter: ").lower()
+    if (userLetter in remainingAlphabets):
+        remainingAlphabets.remove(userLetter)
+        usedLetters.append(userLetter)
+        if (userLetter in wordLetters):
+            wordLetters.remove(userLetter)
+        else:
+            iLives -= 1
+            print("This letter is not in the word.")
+    elif (userLetter in usedLetters):
+        print("You have already used this letter. Try again.")
+        continue
     else:
-        print('YAY! You guessed the word', word, '!!')
+        print("Invalid input!!! Try again.")
+        continue
 
-
-if __name__ == '__main__':
-    hangman()
+if (iLives == 0):
+    print("You lost!!!", end = " ")
+else:
+    print(f"You won!!!", end = " ")
+print(f"The word is '{iWord}'.\n")
