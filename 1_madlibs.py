@@ -1,7 +1,7 @@
 # DOCUMENTATION
 # This program is for playing a game of mad libs. It takes inputs from the user and inserts the words from the user into a story and gives the story as output.
 
-# Variables Used:
+# VARIABLES:
 # iAdj (string): Stores an adjective taken from the user
 # firstVerb (string): Stores a verb taken from the user
 # secondVerb (string): Stores a second verb taken from the user
