@@ -1,3 +1,5 @@
+# DOCUMENTATION
+
 from random import randint
 iMin = int(input("Enter the minimum number: "))
 iMax = int(input("Enter the maximum number: "))
