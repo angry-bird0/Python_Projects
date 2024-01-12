@@ -13,19 +13,27 @@ class iPlayer:
     def getMove(self, gameBoard):
         pas
 
-class humanPlayer:
-    def getMove(self, iBoard):
-        pass
+class humanPlayer(iPlayer):
+    def getMove(self, gameBoard):
+        spaceNum = input("Enter the position number you want to mark(1-9): ")
+        spaceList = gameBoard.availableMoves()
+        while (spaceNum not in spaceList):
+            try:
+                spaceNum = int(spaceNum)
+            except:
+                spaceNum = input("Invalid input!!! Try again.")
+        return spaceNum
 
-class computerPlayer:
-    def getMove(self, iBoard):
-        pass
+class computerPlayer(iPlayer):
+    def getMove(self, gameBoard):
+        return choice(gameBoard.availableMoves())
+
 
 class gameBoard:
     def __init__(self):
-        self.gBoard = []
+        self.gameBoard = []
         for iCount in range(9):
-            self.gBoard.append(' ')
+            self.gameBoard.append(' ')
             if (iCount in [2, 5, 8]):
                 print(iCount + 1)
                 continue
@@ -33,18 +41,48 @@ class gameBoard:
     
     def checkWin(self):
         for rowCount in range(0, 7, 3):
-            if ((self.gBoard[rowCount] != ' ') and (self.gBoard[rowCount] == self.gBoard[rowCount + 1]) and (self.gBoard[rowCount] == self.gBoard[rowCount + 2])):
+            if ((self.gameBoard[rowCount] != ' ') and (self.gameBoard[rowCount] == self.gameBoard[rowCount + 1]) and (self.gameBoard[rowCount] == self.gameBoard[rowCount + 2])):
                 return True
         for colCount in range(3):
-            if ((self.gBoard[colCount] != ' ') and (self.gBoard[colCount] == self.gBoard[colCount + 3]) and (self.gBoard[colCount] == self.gBoard[colCount + 6])):
+            if ((self.gameBoard[colCount] != ' ') and (self.gameBoard[colCount] == self.gameBoard[colCount + 3]) and (self.gameBoard[colCount] == self.gameBoard[colCount + 6])):
                 return True
+        if (((self.gameBoard[0] == self.gameBoard[4]) and (self.gameBoard[0] == self.gameBoard[8])) or ((self.gameBoard[2] == self.gameBoard[4]) and (self.gameBoard[2] == self.gameBoard[6]))):
+            return True
         return False
 
-    def checkSpace(self):
+    def availableMoves(self):
+        movesList = []
         for spaceCount in range(9):
-            if (self.gBoard[spaceCount] == ' '):
+            if (self.gameBoard[spaceCount] == ' '):
+                movesList.append(spaceCount)
+        return(movesList)
+
+    def hasEmptySpace(self):
+        for iCount in range(9):
+            if (self.gameBoard[iCount] = ' '):
                 return True
 
-    def playerTurn(self, spaceNum):
-        if (self.spaceNum == ' '):
+    def printBoard(self):
+        for iCount in range(9):
+            if (iCount in [2, 5, 8]):
+                print(iCount + 1)
+                continue
+            print(iCount + 1, end = '|')
 
+    def makeMove(self, spaceNum, playerLetter):
+        self.gameBoard[spaceNum] = playerLetter
+
+def startPlaying(self, xPlayer, oPlayer, theGame):
+    currentPlayer = 'X'
+    while theGame.hasEmptySpace():
+        print(f"It is the turn of {currentPlayer}.", end = '')
+        theGame.makeMove(theGame.getMove, currentPlayer)
+        theGame.printBoard()
+        if theGame.checkWin():
+            return(f"Player {currentPlayer} has won!!!")
+            break
+        if (currentPlayer == 'X'):
+            currentPlayer = 'O'
+        else:
+            currentPlayer = 'X'
+    print("It is a tie")
