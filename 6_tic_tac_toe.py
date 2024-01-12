@@ -1,3 +1,4 @@
+# DICUMENTATION
 # THINGS I LEARNED
 # 1) 'self' refers to the particular instance of the class that has been created.
 # 2) If you create an object without parenthesis, you have actually created a variable that sotres the class not itself, not an instance of the class
