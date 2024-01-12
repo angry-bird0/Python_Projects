@@ -1,31 +1,20 @@
-# DICUMENTATION
-# THINGS I LEARNED
-# 1) 'self' refers to the particular instance of the class that has been created.
-# 2) If you create an object without parenthesis, you have actually created a variable that sotres the class not itself, not an instance of the class
-# 3) Instances methods in a python class are the methods that are associated to specific instances of a class, and they can access and modify attributes of that class. The first parameter of an instances method is the instance itself (self).
-# 4) Static methods inside a class do not need the self parameter. Use the decorator '@staticmethod' to create a static method. They don't have acdess to instance specific data, and can be called on the class itself without creating a parameter. 
+from random import choice
 
-import random import choice
-
-class iPlayer:
-    def __init__(self, playerLetter):
-        self.playerLetter = playerLetter
-
+class humanPlayer:
     def getMove(self, gameBoard):
-        pas
-
-class humanPlayer(iPlayer):
-    def getMove(self, gameBoard):
-        spaceNum = input("Enter the position number you want to mark(1-9): ")
         spaceList = gameBoard.availableMoves()
-        while (spaceNum not in spaceList):
+        while (True):
             try:
-                spaceNum = int(spaceNum)
+                spaceNum = int(input("Enter the position number you want to mark(1-9): ")) - 1
             except:
-                spaceNum = input("Invalid input!!! Try again.")
+                print("Invalid input!!! Try again.")
+                continue
+            if (spaceNum in spaceList):
+                break
+            print("Invalid input!!! Try again.")
         return spaceNum
 
-class computerPlayer(iPlayer):
+class computerPlayer:
     def getMove(self, gameBoard):
         return choice(gameBoard.availableMoves())
 
@@ -47,7 +36,7 @@ class gameBoard:
         for colCount in range(3):
             if ((self.gameBoard[colCount] != ' ') and (self.gameBoard[colCount] == self.gameBoard[colCount + 3]) and (self.gameBoard[colCount] == self.gameBoard[colCount + 6])):
                 return True
-        if (((self.gameBoard[0] == self.gameBoard[4]) and (self.gameBoard[0] == self.gameBoard[8])) or ((self.gameBoard[2] == self.gameBoard[4]) and (self.gameBoard[2] == self.gameBoard[6]))):
+        if ((self.gameBoard[4] != ' ') and (((self.gameBoard[0] == self.gameBoard[4]) and (self.gameBoard[0] == self.gameBoard[8])) or ((self.gameBoard[2] == self.gameBoard[4]) and (self.gameBoard[2] == self.gameBoard[6])))):
             return True
         return False
 
@@ -60,30 +49,54 @@ class gameBoard:
 
     def hasEmptySpace(self):
         for iCount in range(9):
-            if (self.gameBoard[iCount] = ' '):
+            if (self.gameBoard[iCount] == ' '):
                 return True
 
     def printBoard(self):
         for iCount in range(9):
             if (iCount in [2, 5, 8]):
-                print(iCount + 1)
+                print(self.gameBoard[iCount])
                 continue
-            print(iCount + 1, end = '|')
+            print(self.gameBoard[iCount], end = '|')
 
     def makeMove(self, spaceNum, playerLetter):
         self.gameBoard[spaceNum] = playerLetter
 
-def startPlaying(self, xPlayer, oPlayer, theGame):
+def startPlaying(xPlayer, oPlayer, theGame):
     currentPlayer = 'X'
     while theGame.hasEmptySpace():
-        print(f"It is the turn of {currentPlayer}.", end = '')
-        theGame.makeMove(theGame.getMove, currentPlayer)
+        print(f"\n\nIt is the turn of {currentPlayer}.")
+        if (currentPlayer == 'X'):
+            theGame.makeMove(xPlayer.getMove(theGame), currentPlayer)
+        else:
+            theGame.makeMove(oPlayer.getMove(theGame), currentPlayer)
         theGame.printBoard()
         if theGame.checkWin():
-            return(f"Player {currentPlayer} has won!!!")
-            break
+            print(f"Player {currentPlayer} has won!!!\n\n")
+            return
         if (currentPlayer == 'X'):
             currentPlayer = 'O'
         else:
             currentPlayer = 'X'
     print("It is a tie")
+    return
+
+userOption = None
+while userOption not in ['A', 'B', 'C', 'D']:
+    userOption = input("Select one option: (A) Player vs Player (B) Player vs Computer (C) Computer vs Computer: ")
+    match userOption:
+        case 'A':
+            xPlayer = humanPlayer()
+            oPlayer = humanPlayer()
+        case 'B':
+            xPlayer = humanPlayer()
+            oPlayer = computerPlayer()
+        case 'C':
+            xPlayer = computerPlayer()
+            oPlayer = computerPlayer()
+        case _:
+            print("Incorrect input!!! Try again.")
+
+theGame = gameBoard()
+
+startPlaying(xPlayer, oPlayer, theGame)
