@@ -1,5 +1,5 @@
 # DOCUMENTATION
-# This program takes a range of numbers of as input from the user and generates a random number whihc the user has to guess.
+# This program takes a range of numbers as input from the user and generates a random number whihc the user has to guess.
 
 # FUNCTIONS:
 # randint(integer, integer) -> (integer): Imported from the 'random' library. Takes two numbers as input and returns a pseudo-random number.
