@@ -1,3 +1,4 @@
+# DOCUMENTATION
 from random import choice
 
 #I asked ChatGPT to provide me with 100 words encased in quotes and separated by commas
