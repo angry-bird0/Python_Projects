@@ -1,4 +1,6 @@
 # DOCUMENTATION
+# This program asks the user for the number of lives and selects a random word from a list of 100 words, and the user has to play the game 'hangman' where they guess which word it is.
+
 from random import choice
 
 #I asked ChatGPT to provide me with 100 words encased in quotes and separated by commas
