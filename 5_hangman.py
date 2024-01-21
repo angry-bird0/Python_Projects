@@ -1,6 +1,8 @@
 # DOCUMENTATION
 # This program asks the user for the number of lives and selects a random word from a list of 100 words, and the user has to play the game 'hangman' where they guess which word it is.
 
+# Functions
+
 # CODE
 from random import choice
 
