@@ -1,9 +1,9 @@
 # DOCUMENTATION
 # This program simulates a game of tic-tac-toe between different players which can be humans, computers (randomly selection blocks), or computers (using mini-max algorithm so that the computer never loses)
 
-# CLASSES:
-
+# humanPlayer
 # FUNCTIONS:
+# getMove (list) -> (integer): Asks the user to enter the position they want to mark and returns it if it is available
 
 # VARIABLES:
 
