@@ -6,6 +6,8 @@
 # getMove (list) -> (integer): Asks the user to enter the position they want to mark and returns it if it is available
 
 # VARIABLES:
+# spaceList (list): List of available spaces on the board
+# spaceNum (integer): The position the user wants to mark
 
 # CODE
 from random import choice
