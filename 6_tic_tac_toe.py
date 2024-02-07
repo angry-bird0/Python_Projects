@@ -9,6 +9,8 @@
 # spaceList (list): List of available spaces on the board
 # spaceNum (integer): The position the user wants to mark
 
+# computerPlayer
+
 # CODE
 from random import choice
 
