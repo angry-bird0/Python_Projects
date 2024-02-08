@@ -10,6 +10,7 @@
 # spaceNum (integer): The position the user wants to mark
 
 # computerPlayer
+# FUNCTIONS:
 
 # CODE
 from random import choice
