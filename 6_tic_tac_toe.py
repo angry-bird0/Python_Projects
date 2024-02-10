@@ -14,6 +14,8 @@
 
 # VARIABLES:
 
+# gameBoard
+
 # CODE
 from random import choice
 
