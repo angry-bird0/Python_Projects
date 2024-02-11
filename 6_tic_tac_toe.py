@@ -15,6 +15,7 @@
 # VARIABLES:
 
 # gameBoard
+# FUNCTIONS:
 
 # CODE
 from random import choice
