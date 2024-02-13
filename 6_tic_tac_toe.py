@@ -19,6 +19,8 @@
 
 # VARIABLES
 
+# PROGRAM:
+
 # CODE
 from random import choice
 
