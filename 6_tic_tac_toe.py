@@ -20,6 +20,7 @@
 # VARIABLES
 
 # PROGRAM:
+# FUNCTIONS:
 
 # CODE
 from random import choice
