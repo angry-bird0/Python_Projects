@@ -22,6 +22,8 @@
 # PROGRAM:
 # FUNCTIONS:
 
+# VARIABLES:
+
 # CODE
 from random import choice
 
