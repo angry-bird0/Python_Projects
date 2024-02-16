@@ -11,6 +11,7 @@
 
 # computerPlayer
 # FUNCTIONS:
+# gameBoad (gameBoard): Object that stores the board of the current game
 
 # VARIABLES:
 
