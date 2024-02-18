@@ -14,6 +14,7 @@
 # gameBoad (gameBoard): Object that stores the board of the current game
 
 # VARIABLES:
+# getMove (gameBoard) -> (list): Returns a list of availabel positions on the board of the game
 
 # gameBoard
 # FUNCTIONS:
