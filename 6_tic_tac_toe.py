@@ -18,6 +18,7 @@
 
 # gameBoard
 # FUNCTIONS:
+# __inti__ (None) -> (None): Initialises the board of the game.
 
 # VARIABLES
 
