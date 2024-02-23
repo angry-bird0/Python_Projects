@@ -21,6 +21,7 @@
 # __inti__ (None) -> (None): Initialises the board of the game.
 
 # VARIABLES
+# gameBoard(list): Stores the actual board of the game.
 
 # PROGRAM:
 # FUNCTIONS:
