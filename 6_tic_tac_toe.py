@@ -11,7 +11,7 @@
 
 # computerPlayer
 # FUNCTIONS:
-# gameBoad (gameBoard): Object that stores the board of the current game
+# getMove (gameBoard) -> (integer: Randomly chooses a number from the available positions on the game board.
 
 # VARIABLES:
 # getMove (gameBoard) -> (list): Returns a list of availabel positions on the board of the game
@@ -25,6 +25,7 @@
 
 # PROGRAM:
 # FUNCTIONS:
+# choice 
 
 # VARIABLES:
 
