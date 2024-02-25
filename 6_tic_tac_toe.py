@@ -12,6 +12,7 @@
 # computerPlayer
 # FUNCTIONS:
 # getMove (gameBoard) -> (integer: Randomly chooses a number from the available positions on the game board.
+# choice (list) -> (integer): Takes a list of available positions as input and gives a rondom position form them as an output.
 
 # VARIABLES:
 # getMove (gameBoard) -> (list): Returns a list of availabel positions on the board of the game
