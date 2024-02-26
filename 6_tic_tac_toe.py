@@ -20,6 +20,7 @@
 # gameBoard
 # FUNCTIONS:
 # __inti__ (None) -> (None): Initialises the board of the game.
+# checkWin (None) -> (Boolean): Checks if a player has won or not.
 
 # VARIABLES
 # gameBoard(list): Stores the actual board of the game.
