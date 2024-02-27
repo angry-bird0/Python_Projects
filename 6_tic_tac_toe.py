@@ -21,6 +21,7 @@
 # FUNCTIONS:
 # __inti__ (None) -> (None): Initialises the board of the game.
 # checkWin (None) -> (Boolean): Checks if a player has won or not.
+# availableMoves (None) -> (list): Returns a list of empty positions on the game board.
 
 # VARIABLES
 # gameBoard(list): Stores the actual board of the game.
