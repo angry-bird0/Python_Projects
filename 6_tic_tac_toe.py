@@ -15,13 +15,12 @@
 # choice (list) -> (integer): Takes a list of available positions as input and gives a rondom position form them as an output.
 
 # VARIABLES:
-# getMove (gameBoard) -> (list): Returns a list of availabel positions on the board of the game
 
 # gameBoard
 # FUNCTIONS:
 # __inti__ (None) -> (None): Initialises the board of the game.
 # checkWin (None) -> (Boolean): Checks if a player has won or not.
-# availableMoves (None) -> (list): Returns a list of empty positions on the game board.
+# availableMoves (None) -> (list): Returns a list of available positions on the game board.
 
 # VARIABLES
 # gameBoard(list): Stores the actual board of the game.
