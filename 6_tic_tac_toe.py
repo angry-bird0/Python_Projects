@@ -27,9 +27,11 @@
 
 # PROGRAM:
 # FUNCTIONS:
+# startPlaying (playerOne, playerTwo, gameBoard) -> (None): Takes two players (can be human or computer) and a gameBoard and runs the game.
 # choice 
 
 # VARIABLES:
+# userOption
 
 # CODE
 from random import choice
