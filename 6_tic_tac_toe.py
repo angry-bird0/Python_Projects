@@ -31,7 +31,7 @@
 # choice 
 
 # VARIABLES:
-# userOption
+# userOption (String): Stores user input to determing the type of the players in the game (human or computer)
 
 # CODE
 from random import choice
