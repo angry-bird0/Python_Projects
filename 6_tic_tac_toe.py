@@ -28,7 +28,7 @@
 # PROGRAM:
 # FUNCTIONS:
 # startPlaying (playerOne, playerTwo, gameBoard) -> (None): Takes two players (can be human or computer) and a gameBoard and runs the game.
-# choice 
+# choice (List) -> (Any element from that list): Choses and returns a pseudo-random element from that list
 
 # VARIABLES:
 # userOption (String): Stores user input to determing the type of the players in the game (human or computer).
