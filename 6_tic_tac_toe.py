@@ -7,7 +7,7 @@
 
 # VARIABLES:
 # spaceList (list): List of available spaces on the board.
-# spaceNum (integer): The position the user wants to mark
+# spaceNum (integer): The position the user wants to mark.
 
 # computerPlayer
 # FUNCTIONS:
