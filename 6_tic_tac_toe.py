@@ -3,7 +3,7 @@
 
 # humanPlayer
 # FUNCTIONS:
-# getMove (list) -> (integer): Asks the user to enter the position they want to mark and returns it if it is available
+# getMove (list) -> (integer): Asks the user to enter the position they want to mark and returns it if it is available.
 
 # VARIABLES:
 # spaceList (list): List of available spaces on the board.
