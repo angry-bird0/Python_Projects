@@ -19,7 +19,7 @@
 # __inti__ (None) -> (None): Initialises the board of the game.
 # checkWin (None) -> (Boolean): Checks if a player has won or not.
 # availableMoves (None) -> (list): Returns a list of available positions on the game board.
-# hasEmptySpace (NOne) -> (Boolean): Checks if there is empty space on the game board or not.
+# hasEmptySpace (None) -> (Boolean): Checks if there is empty space on the game board or not.
 # printBoard (None) -> (None): Prints the game board.
 
 # VARIABLES
