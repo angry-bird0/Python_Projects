@@ -6,7 +6,7 @@
 
 # VARIABLES:
 # wordList (list): Stores a list of 100 words.
-# iWord (string): A word randomly chosen from wordList
+# iWord (string): A word randomly chosen from wordList.
 # wordLetters (set): Set of unique letters in iWord
 # remainingAlphabets (list): List of alphabets not tried by the user
 # iLives (integer): Stores the number of lives the user has
