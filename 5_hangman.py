@@ -15,7 +15,7 @@
 # CODE
 from random import choice
 
-#I asked ChatGPT to provide me with 100 words encased in quotes and separated by commas
+#I asked ChatGPT to provide me with 100 words encased in quotes and separated by commas.
 wordList = ['apple', 'banana', 'carrot', 'dog', 'elephant', 'fantastic', 'giraffe', 'happiness', 'imagination', 'jazz', 'kiwi', 'lemon', 'mountain', 'novel', 'ocean', 'penguin', 'quasar', 'rhythm', 'sunshine', 'tangerine', 'umbrella', 'violet', 'whisper', 'xylophone', 'yellow', 'zeppelin', 'adventure', 'butterfly', 'chocolate', 'diamond', 'enigma', 'firefly', 'garden', 'harmony', 'island', 'jasmine', 'kaleidoscope', 'lighthouse', 'melody', 'nightingale', 'orchestra', 'peacock', 'quixotic', 'rose', 'serendipity', 'tranquil', 'utopia', 'velvet', 'wonder', 'xanadu', 'yearning', 'zeal', 'alchemy', 'blossom', 'cascade', 'dream', 'effervescent', 'freedom', 'glisten', 'halcyon', 'innocence', 'journey', 'kismet', 'luminous', 'mystique', 'nirvana', 'opulent', 'prismatic', 'quaint', 'radiant', 'serenity', 'talisman', 'uplifting', 'vivid', 'whimsical', 'zenith', 'amazing', 'bliss', 'cynosure', 'dazzling', 'ecstasy', 'felicity', 'graceful', 'halo', 'intrepid', 'jubilant', 'kaleidoscopic', 'lullaby', 'mesmerize', 'nurturing', 'opulent', 'paradise', 'quasar', 'resplendent', 'serendipity', 'tranquil', 'uplifting', 'vibrant', 'whimsical', 'xylograph', 'yearning', 'zenith']
 
 iWord = choice(wordList)
