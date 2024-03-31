@@ -3,7 +3,7 @@
 
 # VARIABLES:
 # iAdj (string): Stores an adjective taken from the user.
-# firstVerb (string): Stores a verb taken from the user
+# firstVerb (string): Stores a verb taken from the user.
 # secondVerb (string): Stores a second verb taken from the user
 # famousPerson (string): Stores the name of a famous person taken from the user
 # madLib (string): Stores the basic story for the mad lib as f-string
