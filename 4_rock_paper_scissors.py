@@ -2,7 +2,7 @@
 # This program takes input from the user and compares it with a random choice (between rock, paper, and scissor) made by the compter.
 
 # FUNCTIONS:
-# choice (List) -> (Any element from that list): Choses and returns a pseudo-random element from that list.
+# choice (List[String]) -> (String): Choses and returns a pseudo-random element from that list.
 
 # VARIABLES:
 # userInput (string): Stores input from the user.
