@@ -2,7 +2,7 @@
 # This program takes a range of numbers as input from the user and generates a random number which the user has to guess.
 
 # FUNCTIONS:
-# randint (integer, integer) -> (integer): Imported from the 'random' library. Takes two numbers as input and returns a pseudo-random number.
+# randint (Integer, integer) -> (integer): Imported from the 'random' library. Takes two numbers as input and returns a pseudo-random number.
 
 # VARIABLES:
 # iMin (integer): The lower limit of the range from which the random number number will be chosen, taken from the user.
