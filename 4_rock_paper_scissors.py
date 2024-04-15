@@ -6,7 +6,7 @@
 
 # VARIABLES:
 # userInput (string): Stores input from the user.
-# computerChoice (string): Stores the choice of the computer.
+# computerChoice (string): Stores the choice of the computer
 
 # CODE
 from random import choice
